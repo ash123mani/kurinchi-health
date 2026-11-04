@@ -4,9 +4,9 @@ export const SITE = {
   url:
     process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ??
     "https://kurinchihealthproducts.com",
-  phoneDisplay: "+91 73734 46688",
-  phone: "+917373446688",
-  whatsapp: "917373446688",
+  phoneDisplay: "+91 6385 469 100",
+  phone: "+916385469100",
+  whatsapp: "916385469100",
   email: "hello@kurinchihealthproducts.com",
   fssai: "22418328000741",
   marketBy: "Ratchakar Oil Mill",
