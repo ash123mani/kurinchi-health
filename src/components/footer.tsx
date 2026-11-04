@@ -1,47 +1,71 @@
 import Link from "next/link";
 import { Logo } from "@/components/logo";
+import { localePath, type Locale } from "@/i18n/config";
+import { getDictionary } from "@/i18n/dictionaries";
+import { getCategories } from "@/i18n/products";
+import { formatMessage } from "@/lib/format";
 import { SITE, fullAddress, whatsappLink } from "@/lib/site";
-import { CATEGORIES } from "@/lib/products";
 
-export function Footer() {
+export function Footer({ locale }: { locale: Locale }) {
+  const dictionary = getDictionary(locale);
+  const { common, brand, structured, whatsapp } = dictionary;
   const year = new Date().getFullYear();
+  const categories = getCategories(locale).filter(
+    (category) => category.id !== "all",
+  );
+
+  const explore = [
+    { href: "/", label: common.footer.home },
+    { href: "/products", label: common.footer.allProducts },
+    { href: "/about", label: common.footer.about },
+    { href: "/contact", label: common.footer.contact },
+  ];
 
   return (
     <footer className="relative z-10 mt-20 bg-forest text-cream">
       <div className="container-site grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
         <div>
-          <Logo onDark />
+          <Logo
+            locale={locale}
+            primary={brand.logoPrimary}
+            secondary={brand.logoSecondary}
+            homeLabel={formatMessage(common.a11y.logoHome, {
+              name: brand.name,
+            })}
+            onDark
+          />
           <p className="mt-5 max-w-xs text-sm leading-7 text-cream/70">
-            Traditional cold pressed oils, natural sweeteners and handmade care
-            products from Tirunelveli, Tamil Nadu.
+            {structured.websiteDescription}
           </p>
-          <p lang="ta" className="tamil mt-3 max-w-xs text-sm text-cream/70">
-            {SITE.tamilTagline}
+          <p
+            lang={locale === "en" ? "ta" : "en"}
+            className={
+              locale === "en"
+                ? "tamil mt-3 max-w-xs text-sm text-cream/70"
+                : "mt-3 max-w-xs text-sm text-cream/70"
+            }
+          >
+            {brand.secondaryTagline}
           </p>
           <div className="mt-6 flex flex-wrap gap-2">
             <span className="rounded-full border border-cream/20 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-cream/70">
-              FSSAI {SITE.fssai}
+              {formatMessage(common.badges.fssai, { fssai: SITE.fssai })}
             </span>
             <span className="rounded-full border border-cream/20 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-cream/70">
-              100% Natural
+              {common.badges.natural}
             </span>
           </div>
         </div>
 
         <div>
           <h3 className="text-xs font-bold uppercase tracking-[0.18em] text-cream/50">
-            Explore
+            {common.footer.explore}
           </h3>
           <ul className="mt-5 space-y-3 text-sm">
-            {[
-              { href: "/", label: "Home" },
-              { href: "/products", label: "All Products" },
-              { href: "/about", label: "About Us" },
-              { href: "/contact", label: "Contact" },
-            ].map((item) => (
+            {explore.map((item) => (
               <li key={item.href}>
                 <Link
-                  href={item.href}
+                  href={localePath(locale, item.href)}
                   className="text-cream/75 transition-colors hover:text-turmeric-2"
                 >
                   {item.label}
@@ -53,27 +77,25 @@ export function Footer() {
 
         <div>
           <h3 className="text-xs font-bold uppercase tracking-[0.18em] text-cream/50">
-            Categories
+            {common.footer.categories}
           </h3>
           <ul className="mt-5 space-y-3 text-sm">
-            {CATEGORIES.filter((category) => category.id !== "all").map(
-              (category) => (
-                <li key={category.id}>
-                  <Link
-                    href={`/products?category=${category.id}`}
-                    className="text-cream/75 transition-colors hover:text-turmeric-2"
-                  >
-                    {category.name}
-                  </Link>
-                </li>
-              ),
-            )}
+            {categories.map((category) => (
+              <li key={category.id}>
+                <Link
+                  href={`${localePath(locale, "/products")}?category=${category.id}`}
+                  className="text-cream/75 transition-colors hover:text-turmeric-2"
+                >
+                  {category.name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
         <div>
           <h3 className="text-xs font-bold uppercase tracking-[0.18em] text-cream/50">
-            Visit / Contact
+            {common.footer.visitContact}
           </h3>
           <address className="mt-5 space-y-3 text-sm not-italic text-cream/75">
             <p>{fullAddress()}</p>
@@ -93,17 +115,17 @@ export function Footer() {
                 {SITE.email}
               </a>
             </p>
-            <p className="text-cream/55">{SITE.hours}</p>
+            <p className="text-cream/55">{common.hours}</p>
           </address>
           <a
             href={whatsappLink(
-              `Hi ${SITE.name}, I would like to place an order.`,
+              formatMessage(whatsapp.order, { site: brand.name }),
             )}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-whatsapp mt-5 min-h-0! px-5! py-2.5! text-[13px]"
           >
-            Chat on WhatsApp
+            {common.actions.chatWhatsApp}
           </a>
         </div>
       </div>
@@ -111,11 +133,13 @@ export function Footer() {
       <div className="border-t border-cream/10">
         <div className="container-site flex flex-col gap-3 py-6 text-xs text-cream/50 sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {year} {SITE.name}. All rights reserved.
+            {formatMessage(common.footer.rights, {
+              year: String(year),
+              site: brand.name,
+            })}
           </p>
           <p className="max-w-2xl text-cream/40">
-            Product benefits are traditional descriptions, not medical advice.
-            Consult a qualified professional for health concerns.
+            {common.footer.disclaimer}
           </p>
         </div>
       </div>

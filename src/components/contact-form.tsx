@@ -1,13 +1,26 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { PRODUCTS } from "@/lib/products";
-import { SITE, whatsappLink } from "@/lib/site";
+import type { Dictionary } from "@/i18n/dictionaries";
+import { formatMessage } from "@/lib/format";
+import { whatsappLink } from "@/lib/site";
 
 const inputClass =
   "w-full rounded-xl border border-line bg-white/80 px-4 py-3 text-sm text-ink outline-none transition-colors placeholder:text-ink-3/70 focus:border-forest focus:ring-2 focus:ring-forest/10";
 
-export function ContactForm() {
+type ContactFormProps = {
+  products: { slug: string; name: string }[];
+  labels: Dictionary["contact"]["form"];
+  whatsappTemplate: string;
+  siteName: string;
+};
+
+export function ContactForm({
+  products,
+  labels,
+  whatsappTemplate,
+  siteName,
+}: ContactFormProps) {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [product, setProduct] = useState("");
@@ -15,25 +28,25 @@ export function ContactForm() {
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const lines = [
-      `Hi ${SITE.name},`,
-      "",
-      `Name: ${name || "-"}`,
-      `Phone: ${phone || "-"}`,
-      product ? `Product: ${product}` : "",
-      message ? `Message: ${message}` : "",
-      "",
-      "Please share availability, sizes and price.",
-    ].filter(Boolean);
-    window.open(whatsappLink(lines.join("\n")), "_blank", "noopener,noreferrer");
+    const text = formatMessage(whatsappTemplate, {
+      site: siteName,
+      name: name || "-",
+      phone: phone || "-",
+      product: product || "-",
+      message: message || "-",
+    });
+    window.open(whatsappLink(text), "_blank", "noopener,noreferrer");
   }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
-          <label htmlFor="name" className="mb-1.5 block text-xs font-bold uppercase tracking-[0.12em] text-ink-3">
-            Your name
+          <label
+            htmlFor="name"
+            className="mb-1.5 block text-xs font-bold uppercase tracking-[0.12em] text-ink-3"
+          >
+            {labels.name}
           </label>
           <input
             id="name"
@@ -42,13 +55,16 @@ export function ContactForm() {
             onChange={(event) => setName(event.target.value)}
             required
             autoComplete="name"
-            placeholder="Name"
+            placeholder={labels.namePlaceholder}
             className={inputClass}
           />
         </div>
         <div>
-          <label htmlFor="phone" className="mb-1.5 block text-xs font-bold uppercase tracking-[0.12em] text-ink-3">
-            Phone / WhatsApp
+          <label
+            htmlFor="phone"
+            className="mb-1.5 block text-xs font-bold uppercase tracking-[0.12em] text-ink-3"
+          >
+            {labels.phone}
           </label>
           <input
             id="phone"
@@ -58,15 +74,18 @@ export function ContactForm() {
             onChange={(event) => setPhone(event.target.value)}
             required
             autoComplete="tel"
-            placeholder="+91"
+            placeholder={labels.phonePlaceholder}
             className={inputClass}
           />
         </div>
       </div>
 
       <div>
-        <label htmlFor="product" className="mb-1.5 block text-xs font-bold uppercase tracking-[0.12em] text-ink-3">
-          Product of interest
+        <label
+          htmlFor="product"
+          className="mb-1.5 block text-xs font-bold uppercase tracking-[0.12em] text-ink-3"
+        >
+          {labels.product}
         </label>
         <select
           id="product"
@@ -75,8 +94,8 @@ export function ContactForm() {
           onChange={(event) => setProduct(event.target.value)}
           className={inputClass}
         >
-          <option value="">Select a product (optional)</option>
-          {PRODUCTS.map((item) => (
+          <option value="">{labels.productPlaceholder}</option>
+          {products.map((item) => (
             <option key={item.slug} value={item.name}>
               {item.name}
             </option>
@@ -85,8 +104,11 @@ export function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="message" className="mb-1.5 block text-xs font-bold uppercase tracking-[0.12em] text-ink-3">
-          Message
+        <label
+          htmlFor="message"
+          className="mb-1.5 block text-xs font-bold uppercase tracking-[0.12em] text-ink-3"
+        >
+          {labels.message}
         </label>
         <textarea
           id="message"
@@ -94,18 +116,15 @@ export function ContactForm() {
           value={message}
           onChange={(event) => setMessage(event.target.value)}
           rows={4}
-          placeholder="Tell us the quantity, size or any question you have."
+          placeholder={labels.messagePlaceholder}
           className={`${inputClass} resize-y`}
         />
       </div>
 
       <button type="submit" className="btn-whatsapp w-full">
-        Send enquiry on WhatsApp
+        {labels.submit}
       </button>
-      <p className="text-center text-xs text-ink-3">
-        This opens WhatsApp with your message ready to send. No account or
-        payment is needed.
-      </p>
+      <p className="text-center text-xs text-ink-3">{labels.note}</p>
     </form>
   );
 }

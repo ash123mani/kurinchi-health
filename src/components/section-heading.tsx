@@ -3,7 +3,8 @@ import type { ReactNode } from "react";
 type SectionHeadingProps = {
   eyebrow?: string;
   title: ReactNode;
-  tamilTitle?: string;
+  secondaryTitle?: string;
+  secondaryLang?: "en" | "ta";
   description?: ReactNode;
   align?: "left" | "center";
   className?: string;
@@ -12,7 +13,8 @@ type SectionHeadingProps = {
 export function SectionHeading({
   eyebrow,
   title,
-  tamilTitle,
+  secondaryTitle,
+  secondaryLang = "ta",
   description,
   align = "left",
   className = "",
@@ -25,8 +27,17 @@ export function SectionHeading({
       <h2 className="display mt-4 text-3xl text-forest sm:text-4xl md:text-[42px]">
         {title}
       </h2>
-      {tamilTitle ? (
-        <p lang="ta" className="tamil mt-2 text-lg text-ink-2">{tamilTitle}</p>
+      {secondaryTitle ? (
+        <p
+          lang={secondaryLang}
+          className={
+            secondaryLang === "ta"
+              ? "tamil mt-2 text-lg text-ink-2"
+              : "mt-2 text-sm font-semibold uppercase tracking-[0.12em] text-ink-3"
+          }
+        >
+          {secondaryTitle}
+        </p>
       ) : null}
       {description ? (
         <p className="mt-4 text-[15px] leading-7 text-ink-2 sm:text-base">

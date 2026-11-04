@@ -7,7 +7,12 @@ export type Crumb = {
   href?: string;
 };
 
-export function Breadcrumbs({ items }: { items: Crumb[] }) {
+type BreadcrumbsProps = {
+  items: Crumb[];
+  ariaLabel: string;
+};
+
+export function Breadcrumbs({ items, ariaLabel }: BreadcrumbsProps) {
   const structured = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -21,12 +26,15 @@ export function Breadcrumbs({ items }: { items: Crumb[] }) {
 
   return (
     <>
-      <nav aria-label="Breadcrumb">
+      <nav aria-label={ariaLabel}>
         <ol className="flex flex-wrap items-center gap-2 text-xs font-semibold text-ink-3">
           {items.map((item, index) => {
             const isLast = index === items.length - 1;
             return (
-              <li key={`${item.label}-${index}`} className="flex items-center gap-2">
+              <li
+                key={`${item.label}-${index}`}
+                className="flex items-center gap-2"
+              >
                 {item.href && !isLast ? (
                   <Link
                     href={item.href}
@@ -35,7 +43,10 @@ export function Breadcrumbs({ items }: { items: Crumb[] }) {
                     {item.label}
                   </Link>
                 ) : (
-                  <span aria-current={isLast ? "page" : undefined} className="text-forest">
+                  <span
+                    aria-current={isLast ? "page" : undefined}
+                    className="text-forest"
+                  >
                     {item.label}
                   </span>
                 )}

@@ -2,14 +2,21 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import type { Dictionary } from "@/i18n/dictionaries";
 
 type ImageGalleryProps = {
   images: string[];
   alt: string;
   productName: string;
+  labels: Dictionary["product"]["gallery"];
 };
 
-export function ImageGallery({ images, alt, productName }: ImageGalleryProps) {
+export function ImageGallery({
+  images,
+  alt,
+  productName,
+  labels,
+}: ImageGalleryProps) {
   const [active, setActive] = useState(0);
   const safeImages = images.length > 0 ? images : ["/products/brand-hero.jpeg"];
 
@@ -18,25 +25,29 @@ export function ImageGallery({ images, alt, productName }: ImageGalleryProps) {
       <div className="relative aspect-[4/5] overflow-hidden rounded-[28px] border border-line bg-cream-2 shadow-[0_30px_60px_-40px_rgba(35,33,28,0.5)]">
         <Image
           src={safeImages[active]}
-          alt={`${alt} — image ${active + 1}`}
+          alt={`${alt} — ${labels.image} ${active + 1}`}
           fill
           priority
           sizes="(max-width: 1024px) 100vw, 50vw"
           className="object-cover"
         />
         <span className="absolute left-5 top-5 rounded-full bg-cream/90 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.14em] text-forest backdrop-blur">
-          100% Natural
+          {labels.natural}
         </span>
       </div>
 
       {safeImages.length > 1 ? (
-        <div className="mt-4 flex gap-3" role="group" aria-label={`${productName} images`}>
+        <div
+          className="mt-4 flex gap-3"
+          role="group"
+          aria-label={`${productName} ${labels.images}`}
+        >
           {safeImages.map((image, index) => (
             <button
               key={image}
               type="button"
               aria-pressed={active === index}
-              aria-label={`Show image ${index + 1} of ${productName}`}
+              aria-label={`${labels.showImage} ${index + 1} ${labels.of} ${productName}`}
               onClick={() => setActive(index)}
               className={`relative h-20 w-20 overflow-hidden rounded-xl border-2 transition-all sm:h-24 sm:w-24 ${
                 active === index

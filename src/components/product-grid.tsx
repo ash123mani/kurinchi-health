@@ -2,18 +2,32 @@
 
 import { useMemo, useState } from "react";
 import { ProductCard } from "@/components/product-card";
-import { CATEGORIES, type Product, type ProductCategory } from "@/lib/products";
+import type { Locale } from "@/i18n/config";
+import type { Dictionary } from "@/i18n/dictionaries";
+import type { LocalizedCategory, LocalizedProduct } from "@/i18n/products";
+import type { CategoryId } from "@/lib/products";
+import { formatMessage } from "@/lib/format";
 
 type ProductGridProps = {
-  products: Product[];
-  initialCategory?: "all" | ProductCategory;
+  locale: Locale;
+  products: LocalizedProduct[];
+  categories: LocalizedCategory[];
+  labels: Dictionary["catalog"]["labels"];
+  whatsappTemplate: string;
+  siteName: string;
+  initialCategory?: CategoryId;
 };
 
 export function ProductGrid({
+  locale,
   products,
+  categories,
+  labels,
+  whatsappTemplate,
+  siteName,
   initialCategory = "all",
 }: ProductGridProps) {
-  const [active, setActive] = useState<"all" | ProductCategory>(initialCategory);
+  const [active, setActive] = useState<CategoryId>(initialCategory);
 
   const filtered = useMemo(
     () =>
@@ -23,14 +37,22 @@ export function ProductGrid({
     [active, products],
   );
 
+  const categoryNames = useMemo(
+    () =>
+      Object.fromEntries(
+        categories.map((category) => [category.id, category.name]),
+      ) as Record<CategoryId, string>,
+    [categories],
+  );
+
   return (
     <div>
       <div
         className="flex flex-wrap gap-2"
         role="group"
-        aria-label="Filter products by category"
+        aria-label={labels.filter}
       >
-        {CATEGORIES.map((category) => {
+        {categories.map((category) => {
           const selected = active === category.id;
           return (
             <button
@@ -45,8 +67,15 @@ export function ProductGrid({
               }`}
             >
               {category.name}
-              <span lang="ta" className="tamil ml-2 text-[11px] opacity-70">
-                {category.tamilName}
+              <span
+                lang={locale === "en" ? "ta" : "en"}
+                className={
+                  locale === "en"
+                    ? "tamil ml-2 text-[11px] opacity-70"
+                    : "ml-2 text-[11px] opacity-70"
+                }
+              >
+                {category.secondaryName}
               </span>
             </button>
           );
@@ -54,8 +83,9 @@ export function ProductGrid({
       </div>
 
       <p className="mt-5 text-sm text-ink-3">
-        Showing <span className="font-bold text-forest">{filtered.length}</span>{" "}
-        {filtered.length === 1 ? "product" : "products"}
+        {labels.showing}{" "}
+        <span className="font-bold text-forest">{filtered.length}</span>{" "}
+        {filtered.length === 1 ? labels.product : labels.products}
       </p>
 
       <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -63,6 +93,13 @@ export function ProductGrid({
           <ProductCard
             key={product.slug}
             product={product}
+            locale={locale}
+            categoryName={categoryNames[product.category]}
+            labels={labels}
+            whatsappMessage={formatMessage(whatsappTemplate, {
+              site: siteName,
+              product: product.name,
+            })}
             priority={index < 3}
           />
         ))}
@@ -70,7 +107,7 @@ export function ProductGrid({
 
       {filtered.length === 0 ? (
         <p className="mt-10 rounded-2xl border border-line bg-white/60 p-8 text-center text-ink-2">
-          No products in this category yet. Please check back soon.
+          {labels.empty}
         </p>
       ) : null}
     </div>

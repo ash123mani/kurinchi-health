@@ -1,45 +1,70 @@
 import type { MetadataRoute } from "next";
-import { PRODUCTS } from "@/lib/products";
+import { locales } from "@/i18n/config";
+import { PRODUCT_BASE, PRODUCT_SLUGS } from "@/lib/products";
+import { localizedUrl } from "@/lib/seo";
 import { SITE } from "@/lib/site";
+
+type SitemapPath = {
+  path: string;
+  changeFrequency: "weekly" | "monthly";
+  priority: number;
+  images?: string[];
+};
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 
-  const productPages: MetadataRoute.Sitemap = PRODUCTS.map((product) => ({
-    url: `${SITE.url}/products/${product.slug}`,
-    lastModified: now,
-    changeFrequency: "monthly",
-    priority: 0.8,
-    images: product.images.map((image) => `${SITE.url}${image}`),
-  }));
-
-  return [
+  const paths: SitemapPath[] = [
     {
-      url: SITE.url,
-      lastModified: now,
+      path: "/",
       changeFrequency: "weekly",
       priority: 1,
       images: [`${SITE.url}/og-image.jpg`],
     },
     {
-      url: `${SITE.url}/products`,
-      lastModified: now,
+      path: "/products",
       changeFrequency: "weekly",
       priority: 0.9,
-      images: PRODUCTS.map((product) => `${SITE.url}${product.image}`),
+      images: PRODUCT_SLUGS.map(
+        (slug) => `${SITE.url}${PRODUCT_BASE[slug].image}`,
+      ),
     },
-    ...productPages,
+    ...PRODUCT_SLUGS.map((slug) => ({
+      path: `/products/${slug}`,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+      images: PRODUCT_BASE[slug].images.map(
+        (image) => `${SITE.url}${image}`,
+      ),
+    })),
     {
-      url: `${SITE.url}/about`,
-      lastModified: now,
+      path: "/about",
       changeFrequency: "monthly",
       priority: 0.6,
     },
     {
-      url: `${SITE.url}/contact`,
-      lastModified: now,
+      path: "/contact",
       changeFrequency: "monthly",
       priority: 0.6,
     },
   ];
+
+  const languages = (path: string) => ({
+    "en-IN": localizedUrl("en", path),
+    "ta-IN": localizedUrl("ta", path),
+    "x-default": localizedUrl("en", path),
+  });
+
+  return locales.flatMap((locale) =>
+    paths.map((item) => ({
+      url: localizedUrl(locale, item.path),
+      lastModified: now,
+      changeFrequency: item.changeFrequency,
+      priority: item.priority,
+      ...(item.images ? { images: item.images } : {}),
+      alternates: {
+        languages: languages(item.path),
+      },
+    })),
+  );
 }

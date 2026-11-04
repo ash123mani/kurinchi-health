@@ -1,12 +1,12 @@
 import type { MetadataRoute } from "next";
-import { SITE } from "@/lib/site";
+import { en } from "@/i18n/dictionaries/en";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: SITE.name,
+    name: en.brand.name,
     short_name: "Kurinchi",
-    description: SITE.shortDescription,
-    start_url: "/",
+    description: en.meta.siteShortDescription,
+    start_url: "/en",
     display: "standalone",
     background_color: "#FAF6EC",
     theme_color: "#1F3D2B",

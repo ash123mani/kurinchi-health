@@ -94,6 +94,20 @@ button {
   line-height: 1.75;
 }
 
+html[lang^="ta"] body {
+  font-family: var(--font-tamil);
+}
+
+html[lang^="ta"] .font-display,
+html[lang^="ta"] .display {
+  font-family: var(--font-tamil);
+  letter-spacing: 0;
+}
+
+html[lang^="ta"] [lang="en"] {
+  font-family: var(--font-sans);
+}
+
 .eyebrow {
   display: inline-flex;
   align-items: center;

@@ -1,12 +1,27 @@
 import Link from "next/link";
-import { SITE } from "@/lib/site";
+import { localePath, type Locale } from "@/i18n/config";
 
-export function Logo({ onDark = false }: { onDark?: boolean }) {
+type LogoProps = {
+  locale: Locale;
+  primary: string;
+  secondary: string;
+  homeLabel: string;
+  onDark?: boolean;
+};
+
+export function Logo({
+  locale,
+  primary,
+  secondary,
+  homeLabel,
+  onDark = false,
+}: LogoProps) {
   return (
     <Link
-      href="/"
+      href={localePath(locale)}
       className="group flex items-center gap-3"
-      aria-label={`${SITE.name} home`}
+      aria-label={homeLabel}
+      hrefLang={locale}
     >
       <span
         className={`flex h-11 w-11 items-center justify-center rounded-2xl transition-transform duration-300 group-hover:-rotate-3 ${
@@ -21,7 +36,7 @@ export function Logo({ onDark = false }: { onDark?: boolean }) {
         >
           <path
             d="M16 4c5 4 8 8 8 12a8 8 0 0 1-16 0c0-4 3-8 8-12Z"
-            fill={onDark ? "#E3B45B" : "#E3B45B"}
+            fill="#E3B45B"
           />
           <path
             d="M16 9v14M16 16c-2.5-2.4-5-3-7-3 .6 2.6 2.4 4.5 5 5.2M16 19c2.5-2.4 5-3 7-3-.6 2.6-2.4 4.5-5 5.2"
@@ -38,14 +53,14 @@ export function Logo({ onDark = false }: { onDark?: boolean }) {
             onDark ? "text-cream" : "text-forest"
           }`}
         >
-          Kurinchi
+          {primary}
         </span>
         <span
           className={`block text-[9px] font-bold uppercase tracking-[0.22em] ${
             onDark ? "text-cream/60" : "text-ink-3"
           }`}
         >
-          Health Products
+          {secondary}
         </span>
       </span>
     </Link>

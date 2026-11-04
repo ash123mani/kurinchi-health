@@ -15,6 +15,15 @@ npm run dev
 
 Open http://localhost:3000.
 
+## Locales
+
+- `en` — English (`en-IN`)
+- `ta` — Tamil (`ta-IN`)
+
+All routes are statically generated for both locales. The root layout lives in
+`src/app/[lang]/layout.tsx`; locale detection and cookie handling live in
+`src/proxy.ts`.
+
 ## Build
 
 ```bash
@@ -32,15 +41,18 @@ npm run lint
 
 | Route | Purpose |
 | --- | --- |
-| `/` | Home with hero, categories, featured products, process and FAQ |
-| `/products` | Full product listing with category filters |
-| `/products/[slug]` | Product detail page with gallery, benefits and order CTA |
-| `/about` | Brand story, values and production process |
-| `/contact` | Contact details, WhatsApp enquiry form and map |
+| `/en`, `/ta` | Localized home with hero, categories, featured products, process and FAQ |
+| `/{locale}/products` | Full product listing with category filters |
+| `/{locale}/products/[slug]` | Product detail page with gallery, benefits and order CTA |
+| `/{locale}/about` | Brand story, values and production process |
+| `/{locale}/contact` | Contact details, WhatsApp enquiry form and map |
+
+Unprefixed URLs redirect to the visitor's preferred locale. The choice is stored
+in the `NEXT_LOCALE` cookie and can be changed with the header language switcher.
 
 SEO files are generated automatically:
 
-- `/sitemap.xml` — all pages and product images
+- `/sitemap.xml` — both locales, hreflang alternates and product images
 - `/robots.txt`
 - `/manifest.webmanifest`
 
@@ -63,7 +75,16 @@ Update these before going live:
 Product names, descriptions, benefits, sizes and images live in:
 
 ```
-src/lib/products.ts
+src/lib/products.ts                 # base data: category, sizes, images
+src/i18n/products/en.ts             # English product copy
+src/i18n/products/ta.ts             # Tamil product copy
+```
+
+UI copy, page metadata and structured-data text live in:
+
+```
+src/i18n/dictionaries/en.ts
+src/i18n/dictionaries/ta.ts
 ```
 
 ## Images
