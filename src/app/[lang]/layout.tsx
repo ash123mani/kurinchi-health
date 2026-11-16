@@ -105,8 +105,8 @@ export async function generateMetadata({
       images: ["/og-image.jpg"],
     },
     icons: {
-      icon: "/logo.png",
-      apple: "/logo.png",
+      icon: "/logo.jpg",
+      apple: "/logo.jpg",
     },
     formatDetection: {
       email: false,
@@ -137,7 +137,7 @@ function structuredData(locale: Locale) {
         alternateName: dictionary.brand.secondaryName,
         url: localizedUrl(locale),
         image: `${SITE.url}/og-image.jpg`,
-        logo: `${SITE.url}/logo.png`,
+        logo: `${SITE.url}/logo.jpg`,
         description: structured.storeDescription,
         telephone: SITE.phone,
         email: SITE.email,
@@ -193,7 +193,7 @@ function structuredData(locale: Locale) {
         "@id": `${SITE.url}/#organization`,
         name: dictionary.brand.name,
         url: SITE.url,
-        logo: `${SITE.url}/logo.png`,
+        logo: `${SITE.url}/logo.jpg`,
         description: structured.organizationDescription,
         address: fullAddress(),
         contactPoint: {
