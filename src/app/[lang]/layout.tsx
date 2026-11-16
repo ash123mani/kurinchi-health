@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Noto_Sans_Tamil, Plus_Jakarta_Sans } from "next/font/google";
+import { Manrope, Noto_Sans_Tamil } from "next/font/google";
 import { notFound } from "next/navigation";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
@@ -21,16 +21,9 @@ import {
 import { SITE, fullAddress } from "@/lib/site";
 import "../globals.css";
 
-const fraunces = Fraunces({
+const manrope = Manrope({
   subsets: ["latin"],
-  variable: "--font-fraunces",
-  display: "swap",
-  weight: ["400", "500", "600", "700"],
-});
-
-const jakarta = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  variable: "--font-jakarta",
+  variable: "--font-manrope",
   display: "swap",
 });
 
@@ -228,7 +221,7 @@ export default async function RootLayout({ children, params }: LayoutProps) {
     <html
       lang={htmlLang[lang]}
       dir="ltr"
-      className={`${fraunces.variable} ${jakarta.variable} ${notoTamil.variable}`}
+      className={`${manrope.variable} ${notoTamil.variable}`}
     >
       <body className="font-sans">
         <noscript>

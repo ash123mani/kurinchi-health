@@ -159,7 +159,7 @@ export default async function AboutPage({ params }: AboutPageProps) {
             className="mx-auto"
             description={about.values.description}
           />
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
+          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {about.values.items.map((value, index) => (
               <Reveal key={value.title} delay={index * 80}>
                 <div className="h-full rounded-2xl border border-line bg-white/60 p-7 text-center">
@@ -190,6 +190,38 @@ export default async function AboutPage({ params }: AboutPageProps) {
       </section>
 
       <section className="section-tight">
+        <div className="container-site grid gap-6 lg:grid-cols-2">
+          <Reveal>
+            <div className="h-full rounded-[28px] border border-line bg-white/60 p-7 sm:p-10">
+              <span className="eyebrow">{about.vision.eyebrow}</span>
+              <h2 className="display mt-4 text-3xl text-forest">
+                {about.vision.title}
+              </h2>
+              <p className="mt-4 text-sm leading-7 text-ink-2">
+                {about.vision.text}
+              </p>
+            </div>
+          </Reveal>
+          <Reveal delay={120}>
+            <div className="h-full rounded-[28px] border border-line bg-white/60 p-7 sm:p-10">
+              <span className="eyebrow">{about.mission.eyebrow}</span>
+              <h2 className="display mt-4 text-3xl text-forest">
+                {about.mission.title}
+              </h2>
+              <ul className="mt-4 space-y-3">
+                {about.mission.items.map((item) => (
+                  <li key={item} className="flex gap-3 text-sm leading-6 text-ink-2">
+                    <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-turmeric" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="section-tight">
         <div className="container-site">
           <SectionHeading
             eyebrow={about.process.eyebrow}
@@ -212,6 +244,28 @@ export default async function AboutPage({ params }: AboutPageProps) {
                 </div>
               </Reveal>
             ))}
+          </div>
+
+          <div className="mt-10 rounded-[28px] border border-line bg-white/60 p-7 sm:p-10">
+            <SectionHeading
+              eyebrow={dictionary.wholesale.eyebrow}
+              title={dictionary.wholesale.title}
+              description={dictionary.wholesale.description}
+            />
+            <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+              {dictionary.wholesale.points.map((point) => (
+                <li key={point} className="flex gap-3 text-sm text-ink-2">
+                  <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-turmeric" />
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-6">
+              <WhatsAppButton
+                message={formatMessage(whatsapp.bulkQuote, { site: brand.name })}
+                label={dictionary.wholesale.cta}
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -246,12 +300,18 @@ export default async function AboutPage({ params }: AboutPageProps) {
               <address className="mt-3 space-y-1 text-sm not-italic leading-7 text-ink-2">
                 <p className="font-bold text-forest">{SITE.marketBy}</p>
                 <p>{fullAddress()}</p>
-                <p>
+                <p className="space-x-3">
                   <a
                     href={`tel:${SITE.phone}`}
                     className="font-semibold text-forest hover:underline"
                   >
                     {SITE.phoneDisplay}
+                  </a>
+                  <a
+                    href={`tel:${SITE.phoneAlt}`}
+                    className="font-semibold text-forest hover:underline"
+                  >
+                    {SITE.phoneDisplayAlt}
                   </a>
                 </p>
                 <p>

@@ -150,16 +150,16 @@ export default async function ContactPage({ params }: ContactPageProps) {
                   <span className="mt-1 block font-display text-lg font-semibold text-forest">
                     {SITE.phoneDisplay}
                   </span>
+                  <span className="block font-display text-lg font-semibold text-forest">
+                    {SITE.phoneDisplayAlt}
+                  </span>
                   <span className="mt-0.5 block text-sm text-ink-2">
                     {contact.cards.whatsapp.note}
                   </span>
                 </span>
               </a>
 
-              <a
-                href={`tel:${SITE.phone}`}
-                className="flex items-start gap-4 rounded-2xl border border-line bg-white/60 p-5 transition-colors hover:border-forest/30 hover:bg-white"
-              >
+              <div className="flex items-start gap-4 rounded-2xl border border-line bg-white/60 p-5">
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-forest/10 text-forest">
                   <svg
                     viewBox="0 0 24 24"
@@ -180,8 +180,13 @@ export default async function ContactPage({ params }: ContactPageProps) {
                   <span className="block text-xs font-bold uppercase tracking-[0.14em] text-ink-3">
                     {contact.cards.call.label}
                   </span>
-                  <span className="mt-1 block font-display text-lg font-semibold text-forest">
-                    {SITE.phoneDisplay}
+                  <span className="mt-1 flex flex-col gap-1 font-display text-lg font-semibold text-forest">
+                    <a href={`tel:${SITE.phone}`} className="hover:underline">
+                      {SITE.phoneDisplay}
+                    </a>
+                    <a href={`tel:${SITE.phoneAlt}`} className="hover:underline">
+                      {SITE.phoneDisplayAlt}
+                    </a>
                   </span>
                   <span className="mt-0.5 block text-sm text-ink-2">
                     {formatMessage(contact.cards.call.note, {
@@ -189,7 +194,7 @@ export default async function ContactPage({ params }: ContactPageProps) {
                     })}
                   </span>
                 </span>
-              </a>
+              </div>
 
               <a
                 href={`mailto:${SITE.email}`}

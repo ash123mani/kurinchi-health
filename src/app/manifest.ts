@@ -4,7 +4,7 @@ import { en } from "@/i18n/dictionaries/en";
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: en.brand.name,
-    short_name: "Kurinchi",
+    short_name: "Kurinji",
     description: en.meta.siteShortDescription,
     start_url: "/en",
     display: "standalone",

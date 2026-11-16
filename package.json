@@ -1,7 +1,7 @@
 {
   "name": "kurinchi-health-products",
   "version": "1.0.0",
-  "description": "Kurinchi Health Products — traditional cold-pressed oils, natural sweeteners and handmade personal care. Quality • Purity • Health.",
+  "description": "Retchakar Oil Mill & Kurinji Health Products — 10 years of traditional wooden chekku oils, natural food products and handmade coconut oil soap. Quality you can trust. Tradition you can feel.",
   "private": true,
   "scripts": {
     "dev": "next dev",

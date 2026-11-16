@@ -16,9 +16,9 @@
   --color-ink-3: #6f6a5c;
   --color-line: #e2d8c3;
 
-  --font-display: var(--font-fraunces), Georgia, serif;
-  --font-sans: var(--font-jakarta), -apple-system, system-ui, sans-serif;
-  --font-tamil: var(--font-noto-tamil), var(--font-jakarta), sans-serif;
+  --font-display: var(--font-manrope), -apple-system, system-ui, sans-serif;
+  --font-sans: var(--font-manrope), -apple-system, system-ui, sans-serif;
+  --font-tamil: var(--font-noto-tamil), var(--font-manrope), sans-serif;
 
   --max-w-site: 1200px;
 }

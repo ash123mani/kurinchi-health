@@ -95,12 +95,20 @@ export function Header({
             className="inline-flex items-center gap-1.5 rounded-full border border-line px-3 py-2 text-xs font-bold text-ink-2 transition-colors hover:border-forest/40 hover:text-forest"
             compact
           />
-          <a
-            href={`tel:${SITE.phone}`}
-            className="text-sm font-semibold text-ink-2 transition-colors hover:text-forest"
-          >
-            {SITE.phoneDisplay}
-          </a>
+          <div className="flex flex-col items-end leading-tight">
+            <a
+              href={`tel:${SITE.phone}`}
+              className="text-sm font-semibold text-ink-2 transition-colors hover:text-forest"
+            >
+              {SITE.phoneDisplay}
+            </a>
+            <a
+              href={`tel:${SITE.phoneAlt}`}
+              className="text-xs font-semibold text-ink-3 transition-colors hover:text-forest"
+            >
+              {SITE.phoneDisplayAlt}
+            </a>
+          </div>
           <a
             href={whatsappLink(orderMessage)}
             target="_blank"
@@ -184,6 +192,12 @@ export function Header({
             className="mt-1 px-4 py-2 text-center text-sm font-semibold text-ink-2"
           >
             {common.actions.call.replace("{phone}", SITE.phoneDisplay)}
+          </a>
+          <a
+            href={`tel:${SITE.phoneAlt}`}
+            className="px-4 py-2 text-center text-sm font-semibold text-ink-2"
+          >
+            {common.actions.call.replace("{phone}", SITE.phoneDisplayAlt)}
           </a>
         </nav>
       </div>

@@ -99,12 +99,18 @@ export function Footer({ locale }: { locale: Locale }) {
           </h3>
           <address className="mt-5 space-y-3 text-sm not-italic text-cream/75">
             <p>{fullAddress()}</p>
-            <p>
+            <p className="space-x-3">
               <a
                 href={`tel:${SITE.phone}`}
                 className="transition-colors hover:text-turmeric-2"
               >
                 {SITE.phoneDisplay}
+              </a>
+              <a
+                href={`tel:${SITE.phoneAlt}`}
+                className="transition-colors hover:text-turmeric-2"
+              >
+                {SITE.phoneDisplayAlt}
               </a>
             </p>
             <p>

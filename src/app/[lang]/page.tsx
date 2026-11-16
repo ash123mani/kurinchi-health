@@ -56,9 +56,8 @@ export async function generateMetadata({
 
 const categoryEmoji = {
   oils: "🫙",
-  sweeteners: "🍯",
-  "salt-soap": "🧂",
-  "hair-care": "🌿",
+  "natural-foods": "🍯",
+  "personal-care": "🧼",
 } as const;
 
 export default async function HomePage({ params }: HomePageProps) {
@@ -381,6 +380,58 @@ export default async function HomePage({ params }: HomePageProps) {
       <section className="section-tight">
         <div className="container-site">
           <SectionHeading
+            eyebrow={home.whyChoose.eyebrow}
+            title={home.whyChoose.title}
+            secondaryTitle={home.whyChoose.secondaryTitle}
+            secondaryLang={secondaryLang}
+            description={home.whyChoose.description}
+            align="center"
+            className="mx-auto"
+          />
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {home.whyChoose.items.map((item, index) => (
+              <Reveal key={item.title} delay={index * 60}>
+                <div className="h-full rounded-2xl border border-line bg-white/50 p-6">
+                  <h3 className="font-display text-lg font-semibold text-forest">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-ink-2">
+                    {item.text}
+                  </p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+          <div className="mt-10 rounded-[28px] border border-line bg-white/60 p-7 sm:p-10">
+            <SectionHeading
+              eyebrow={dictionary.wholesale.eyebrow}
+              title={dictionary.wholesale.title}
+              description={dictionary.wholesale.description}
+            />
+            <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+              {dictionary.wholesale.points.map((point) => (
+                <li key={point} className="flex gap-3 text-sm text-ink-2">
+                  <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-turmeric" />
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-6">
+              <WhatsAppButton
+                message={formatMessage(whatsapp.bulkQuote, {
+                  site: brand.name,
+                })}
+                label={dictionary.wholesale.cta}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-tight">
+        <div className="container-site">
+          <SectionHeading
             eyebrow={home.process.eyebrow}
             title={home.process.title}
             align="center"
@@ -468,6 +519,12 @@ export default async function HomePage({ params }: HomePageProps) {
                 className="btn-secondary border-cream/30! text-cream! hover:bg-cream/10!"
               >
                 {common.actions.call.replace("{phone}", SITE.phoneDisplay)}
+              </a>
+              <a
+                href={`tel:${SITE.phoneAlt}`}
+                className="btn-secondary border-cream/30! text-cream! hover:bg-cream/10!"
+              >
+                {common.actions.call.replace("{phone}", SITE.phoneDisplayAlt)}
               </a>
             </div>
           </div>

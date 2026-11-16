@@ -129,6 +129,9 @@ export default async function ProductsPage({
             <a href={`tel:${SITE.phone}`} className="btn-secondary">
               {common.actions.call.replace("{phone}", SITE.phoneDisplay)}
             </a>
+            <a href={`tel:${SITE.phoneAlt}`} className="btn-secondary">
+              {common.actions.call.replace("{phone}", SITE.phoneDisplayAlt)}
+            </a>
           </div>
         </div>
       </section>

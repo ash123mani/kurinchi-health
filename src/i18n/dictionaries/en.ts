@@ -1,11 +1,11 @@
 export const en = {
   brand: {
-    logoPrimary: "Kurinchi",
+    logoPrimary: "Kurinji",
     logoSecondary: "Health Products",
-    name: "Kurinchi Health Products",
+    name: "Kurinji Health Products",
     secondaryName: "குறிஞ்சி ஹெல்த் புரொடக்ட்ஸ்",
-    tagline: "Quality • Purity • Health",
-    secondaryTagline: "தரம் • தூய்மை • ஆரோக்கியம்",
+    tagline: "Quality You Can Trust • Tradition You Can Feel",
+    secondaryTagline: "நம்பகமான தரம் • உணரக்கூடிய பாரம்பரியம்",
   },
   nav: {
     home: "Home",
@@ -70,16 +70,31 @@ export const en = {
         "Product benefits are traditional descriptions, not medical advice. Consult a qualified professional for health concerns.",
     },
   },
+  wholesale: {
+    eyebrow: "Wholesale & retail",
+    title: "Wholesale & Retail Available",
+    description:
+      "We welcome individual customers, retailers, grocery stores, supermarkets, distributors and bulk buyers. Whether you need products for your family or bulk quantities for your business, we are happy to serve you.",
+    points: [
+      "Individual customers",
+      "Retailers & grocery stores",
+      "Supermarkets & distributors",
+      "Bulk buyers",
+    ],
+    cta: "Get a wholesale quote",
+  },
   meta: {
     siteTitle:
-      "Kurinchi Health Products — Cold Pressed Oils, Natural Sweeteners & Handmade Care",
+      "Kurinji Health Products — 10 Years of Traditional Wooden Chekku Oils",
     siteDescription:
-      "Kurinchi Health Products brings you traditional cold pressed coconut, gingelly and groundnut oils, organic country sugar, Himalayan rock salt, palm jaggery, palm candy, handmade coconut oil soap and herbal hair oil. 100% natural, chemical-free products made by traditional methods in Tirunelveli, Tamil Nadu.",
+      "Kurinji Health Products, from Retchakar Oil Mill, brings you 10 years of traditional wooden chekku oils, natural food products and handmade coconut oil soap. Cold pressed coconut, groundnut and sesame oils, country jaggery, rock salt, palm jaggery and palm candy — made with care in Tisaiyanvilai, Tirunelveli, Tamil Nadu.",
     siteShortDescription:
-      "Traditional cold pressed oils, natural sweeteners and handmade care products. Quality • Purity • Health.",
+      "10 years of traditional wooden chekku oils, natural food products and handmade coconut oil soap. Quality you can trust. Tradition you can feel.",
     category: "Natural Food & Health Products",
     keywords: [
+      "traditional wooden chekku oil",
       "cold pressed coconut oil",
+      "cold pressed sesame oil",
       "cold pressed gingelly oil",
       "cold pressed groundnut oil",
       "wood pressed oil Tamil Nadu",
@@ -87,17 +102,17 @@ export const en = {
       "செக்கு தேங்காய் எண்ணெய்",
       "செக்கு நல்லெண்ணை",
       "செக்கு கடலை எண்ணெய்",
-      "organic country sugar",
-      "naattu sarkarai",
-      "Himalayan rock salt",
+      "country jaggery",
+      "nattu sarkkarai",
+      "rock salt",
       "induppu",
       "palm jaggery",
       "karupatti",
       "palm candy",
       "panangkarkandu",
       "handmade coconut oil soap",
-      "herbal hair oil",
-      "Kurinchi Health Products",
+      "Kurinji Health Products",
+      "Retchakar Oil Mill",
       "Tirunelveli natural products",
       "Tamil Nadu cold pressed oil",
       "natural health products India",
@@ -105,36 +120,36 @@ export const en = {
     productKeywords: ["cold pressed oil Tamil Nadu", "buy online"],
     home: {
       title:
-        "Kurinchi Health Products — Cold Pressed Oils & Natural Sweeteners in Tirunelveli",
+        "Kurinji Health Products — Traditional Wooden Chekku Oils in Tirunelveli",
       description:
-        "Buy traditional cold pressed coconut oil, gingelly oil, groundnut oil, organic country sugar, Himalayan rock salt, palm jaggery, palm candy, handmade soap and herbal hair oil. 100% natural, chemical free. Order on WhatsApp.",
+        "Buy traditional cold pressed coconut oil, groundnut oil, sesame oil, country jaggery, rock salt, palm jaggery, palm candy and handmade coconut oil soap from Retchakar Oil Mill. 10 years of trust. Wholesale and retail available. Order on WhatsApp.",
       ogTitle:
-        "Kurinchi Health Products — Cold Pressed Oils & Natural Sweeteners",
+        "Kurinji Health Products — 10 Years of Traditional Wooden Chekku Oils",
       ogDescription:
-        "Traditional wood pressed oils, natural sweeteners and handmade care products from Tirunelveli, Tamil Nadu.",
+        "Traditional wood pressed oils, natural food products and handmade coconut oil soap from Tisaiyanvilai, Tirunelveli, Tamil Nadu.",
     },
     catalog: {
       title:
-        "All Products — Cold Pressed Oils, Sweeteners, Salt & Handmade Care",
+        "All Products — Wooden Chekku Oils, Natural Foods & Handmade Soap",
       description:
-        "Browse all Kurinchi Health Products: cold pressed coconut oil, gingelly oil, groundnut oil, organic country sugar, Himalayan rock salt, palm jaggery, palm candy, handmade coconut oil soap and herbal hair oil.",
-      ogTitle: "All Products | Kurinchi Health Products",
+        "Browse all Kurinji Health Products: cold pressed coconut oil, groundnut oil, sesame oil, country jaggery, rock salt, palm jaggery, palm candy and handmade coconut oil soap.",
+      ogTitle: "All Products | Kurinji Health Products",
       ogDescription:
-        "Traditional cold pressed oils, natural sweeteners, rock salt, soap and herbal hair oil.",
+        "Traditional cold pressed oils, natural food products and handmade coconut oil soap.",
     },
     about: {
-      title: "About Us — Traditional Cold Pressed Products from Tirunelveli",
+      title: "About Us — 10 Years of Tradition, Quality & Trust",
       description:
-        "Learn about Kurinchi Health Products: our story, traditional wood pressing methods, quality standards and commitment to pure, chemical-free natural products from Tirunelveli, Tamil Nadu.",
-      ogTitle: "About Kurinchi Health Products",
+        "Learn about Retchakar Oil Mill and Kurinji Health Products: 10 years of traditional wooden chekku oil extraction, our story, vision, mission and commitment to natural products in Tisaiyanvilai, Tirunelveli, Tamil Nadu.",
+      ogTitle: "About Kurinji Health Products",
       ogDescription:
-        "Traditional cold pressed oils, natural sweeteners and handmade care from Tirunelveli, Tamil Nadu.",
+        "10 years of traditional wooden chekku oils, natural food products and handmade coconut oil soap from Tisaiyanvilai, Tirunelveli.",
     },
     contact: {
-      title: "Contact Us — Order Cold Pressed Oils & Natural Products",
+      title: "Contact Us — Order Wooden Chekku Oils & Natural Products",
       description:
-        "Contact Kurinchi Health Products in Tisaiyanvilai, Tirunelveli. Call, WhatsApp or email us to order cold pressed oils, natural sweeteners, rock salt, soap and herbal hair oil.",
-      ogTitle: "Contact Kurinchi Health Products",
+        "Contact Kurinji Health Products in Tisaiyanvilai, Tirunelveli. Call, WhatsApp or email us to order cold pressed oils, country jaggery, rock salt, palm jaggery, palm candy and handmade coconut oil soap.",
+      ogTitle: "Contact Kurinji Health Products",
       ogDescription:
         "Call, WhatsApp or visit us in Tisaiyanvilai, Tirunelveli, Tamil Nadu.",
     },
@@ -142,44 +157,44 @@ export const en = {
   },
   home: {
     hero: {
-      eyebrow: "Tirunelveli • Traditional methods",
-      titleLine1: "Traditional goodness,",
-      titleLine2: "pressed slowly.",
-      titleLine3: "Poured purely.",
+      eyebrow: "Tisaiyanvilai • 10 years of tradition",
+      titleLine1: "A trusted name in",
+      titleLine2: "natural products.",
+      titleLine3: "For 10 years.",
       secondaryTitle: "பாரம்பரிய முறையில் தயாரிக்கப்பட்ட தூய இயற்கை பொருட்கள்",
       description:
-        "Cold pressed coconut, gingelly and groundnut oils, natural sweeteners, Himalayan rock salt and handmade care products — made the way our families have always made them. No chemicals. No shortcuts. Just honest food.",
-      badge: "Quality • Purity • Health",
-      floatingLabel: "Wood pressed",
-      floatingValue: "No chemicals",
+        "Welcome to Retchakar Oil Mill – Kurinji Health Products, your trusted destination for traditional wooden chekku oils and natural food products. With 10 years of experience, we bring nature's goodness to every home through quality products prepared with care, traditional values and dedication.",
+      badge: "Quality You Can Trust • Tradition You Can Feel",
+      floatingLabel: "10 years",
+      floatingValue: "Of tradition & trust",
       imageAlts: {
         brand:
-          "Kurinchi Health Products natural cold pressed oils and traditional products",
+          "Kurinji Health Products natural cold pressed oils and traditional products",
         coconut:
           "Cold pressed coconut oil — செக்கு தேங்காய் எண்ணெய்",
         jaggery: "Pure palm jaggery — சுத்தமான கருப்பட்டி",
       },
     },
     stats: [
-      { value: "9", label: "Natural products" },
-      { value: "100%", label: "Chemical free" },
+      { value: "10+", label: "Years of experience" },
+      { value: "8", label: "Natural products" },
       { value: "{fssai}", label: "FSSAI" },
     ],
     marquee: [
+      "10 Years of Trust",
+      "Traditional Wooden Chekku",
       "100% Natural",
-      "Wood Pressed",
       "No Chemicals",
-      "No Preservatives",
-      "Handmade",
+      "Wholesale & Retail",
       "FSSAI {fssai}",
-      "Quality • Purity • Health",
+      "Quality • Tradition • Trust",
     ],
     categories: {
       eyebrow: "What we make",
       title: "A pantry built on tradition",
       secondaryTitle: "எங்கள் தயாரிப்புகள்",
       description:
-        "From everyday cooking oils to natural sweeteners and handmade care, everything is prepared in small batches with simple ingredients.",
+        "Traditional wooden chekku oils, natural food products and handmade coconut oil soap — everything is prepared with care, traditional values and dedication.",
     },
     featured: {
       eyebrow: "Our products",
@@ -189,24 +204,60 @@ export const en = {
     },
     about: {
       eyebrow: "Our promise",
-      title: "Made by people who still believe in doing it slowly.",
+      title: "Ten years of doing it the traditional way.",
       secondaryTitle: "பாரம்பரிய முறையில் தயாரிக்கப்பட்ட தூய இயற்கை பொருட்கள்",
       description:
-        "Kurinchi Health Products began with a simple idea: keep the food our grandparents ate, made the way they made it. We source carefully, press in small batches and refuse to add chemicals or preservatives. What reaches your kitchen is simply real food.",
+        "For 10 years, Retchakar Oil Mill has been bringing nature's goodness to every home under the Kurinji Health Products name. We specialise in traditional wooden chekku oil extraction, offering authentic taste and quality in every drop, along with carefully selected natural food products and handmade coconut oil soap.",
       imageAlt:
         "Traditional wood pressed gingelly oil — செக்கு நல்லெண்ணை",
       values: [
         {
           title: "Quality",
-          text: "Carefully selected ingredients and small-batch production.",
+          text: "We give importance to the quality of every product.",
         },
         {
-          title: "Purity",
-          text: "No chemicals, no preservatives, no artificial colours.",
+          title: "Tradition",
+          text: "We respect traditional methods and values.",
         },
         {
-          title: "Health",
-          text: "Traditional products that support a natural everyday diet.",
+          title: "Trust",
+          text: "Customer satisfaction and trust are at the heart of our business.",
+        },
+        {
+          title: "Commitment",
+          text: "We serve our customers with care and responsibility.",
+        },
+      ],
+    },
+    whyChoose: {
+      eyebrow: "Why choose us",
+      title: "Why choose Retchakar Oil Mill?",
+      secondaryTitle: "எங்களை ஏன் தேர்வு செய்ய வேண்டும்?",
+      description: "A trusted name in natural products for 10 years.",
+      items: [
+        {
+          title: "10 Years of Experience",
+          text: "A decade of trusted service, traditional values and consistent quality.",
+        },
+        {
+          title: "Traditional Wooden Chekku Oil Extraction",
+          text: "Authentic taste and quality in every drop, extracted the traditional way.",
+        },
+        {
+          title: "Quality-Focused Products",
+          text: "Every product is prepared with care and attention to quality.",
+        },
+        {
+          title: "Carefully Selected Ingredients",
+          text: "We choose quality ingredients from trusted local sources.",
+        },
+        {
+          title: "Wholesale & Retail Supply",
+          text: "We serve families, retailers, supermarkets, distributors and bulk buyers.",
+        },
+        {
+          title: "Customer Satisfaction",
+          text: "Customer satisfaction is our priority in every order.",
         },
       ],
     },
@@ -217,22 +268,22 @@ export const en = {
         {
           step: "01",
           title: "Select",
-          text: "We choose quality coconuts, sesame, groundnuts and palm sap from trusted local sources.",
+          text: "We choose quality coconuts, groundnuts, sesame and palm sap from trusted local sources.",
         },
         {
           step: "02",
           title: "Press",
-          text: "Oils are extracted slowly in a traditional wood press, keeping natural aroma and nutrients.",
+          text: "Oils are extracted slowly in a traditional wooden chekku, keeping natural aroma and nutrients.",
         },
         {
           step: "03",
           title: "Prepare",
-          text: "Sweeteners, salt and soap are prepared in small batches with simple, honest methods.",
+          text: "Country jaggery, rock salt, palm jaggery, palm candy and handmade soap are prepared in small batches.",
         },
         {
           step: "04",
           title: "Deliver",
-          text: "Products are packed carefully and sent to your door, fresh from our unit in Tirunelveli.",
+          text: "Products are packed carefully and sent to your door, fresh from our unit in Tisaiyanvilai.",
         },
       ],
     },
@@ -243,11 +294,11 @@ export const en = {
         "Still unsure about something? Send us a WhatsApp message and we will help you choose.",
     },
     cta: {
-      eyebrow: "Ready to order?",
-      title: "Bring home the taste of tradition.",
-      secondaryTitle: "தரம் • தூய்மை • ஆரோக்கியம்",
+      eyebrow: "Our commitment",
+      title: "Quality you can trust. Tradition you can feel.",
+      secondaryTitle: "நம்பகமான தரம் • உணரக்கூடிய பாரம்பரியம்",
       description:
-        "Message us on WhatsApp with the products you need. We will share the available sizes, price and delivery details.",
+        "Every product is prepared with care, traditional values and dedication. Message us on WhatsApp for retail orders, wholesale enquiries and delivery details.",
     },
   },
   catalog: {
@@ -257,12 +308,12 @@ export const en = {
     secondaryTitle:
       "எங்கள் தயாரிப்புகள் — பாரம்பரிய முறையில் தயாரிக்கப்பட்ட தூய இயற்கை பொருட்கள்",
     description:
-      "Cold pressed oils, natural sweeteners, Himalayan rock salt, handmade soap and herbal hair oil. Every product is made in small batches with simple ingredients and no chemicals.",
+      "Traditional wooden chekku oils, natural food products and handmade coconut oil soap. Every product is made with carefully selected ingredients and no chemicals.",
     bulk: {
-      eyebrow: "Buying in bulk?",
-      title: "We supply families, shops and events",
+      eyebrow: "Wholesale & retail",
+      title: "We supply families, shops and businesses",
       description:
-        "Need larger quantities for a function, shop or restaurant? Message us for bulk pricing and delivery across Tamil Nadu and India.",
+        "We welcome retailers, grocery stores, supermarkets, distributors and bulk buyers. Message us for wholesale pricing and delivery across Tamil Nadu and India.",
     },
     labels: {
       filter: "Filter products by category",
@@ -280,30 +331,24 @@ export const en = {
         name: "All Products",
         secondaryName: "அனைத்து பொருட்கள்",
         description:
-          "Everything we make, from cold pressed oils to natural sweeteners.",
+          "Everything we make, from wooden chekku oils to natural food products.",
       },
       oils: {
-        name: "Cold Pressed Oils",
-        secondaryName: "செக்கு எண்ணெய்கள்",
+        name: "Traditional Wooden Chekku Oils",
+        secondaryName: "பாரம்பரிய மரச்செக்கு எண்ணெய்கள்",
         description:
-          "Unrefined wood pressed cooking oils made the traditional chekku way.",
+          "Coconut oil, groundnut oil and sesame (gingelly) oil extracted in a traditional wooden chekku.",
       },
-      sweeteners: {
-        name: "Natural Sweeteners",
-        secondaryName: "இயற்கை இனிப்புகள்",
+      "natural-foods": {
+        name: "Natural Food Products",
+        secondaryName: "இயற்கை உணவுப் பொருட்கள்",
         description:
-          "Country sugar, palm jaggery and palm candy — unrefined and chemical free.",
+          "Country jaggery, rock salt, palm jaggery and palm candy — natural, unrefined and chemical free.",
       },
-      "salt-soap": {
-        name: "Salt & Soap",
-        secondaryName: "உப்பு & சோப்",
-        description: "Himalayan rock salt and handmade coconut oil soap.",
-      },
-      "hair-care": {
-        name: "Hair Care",
-        secondaryName: "கூந்தல் பராமரிப்பு",
-        description:
-          "Herbal hair oil made with natural ingredients and no chemicals.",
+      "personal-care": {
+        name: "Personal Care Products",
+        secondaryName: "தனிநபர் பராமரிப்பு பொருட்கள்",
+        description: "Handmade coconut oil soap made in small batches.",
       },
     },
   },
@@ -327,7 +372,7 @@ export const en = {
     related: "You may also like",
     naturalBadge: "100% Natural",
     metaSizes: "Available sizes:",
-    metaOrder: "Order from Kurinchi Health Products, Tirunelveli.",
+    metaOrder: "Order from Kurinji Health Products, Tisaiyanvilai, Tirunelveli.",
     gallery: {
       natural: "100% Natural",
       image: "image",
@@ -338,45 +383,67 @@ export const en = {
   },
   about: {
     breadcrumb: "About",
-    eyebrow: "Our story",
-    title: "Food the way it used to be.",
-    secondaryTitle: "பாரம்பரிய முறையில் தயாரிக்கப்பட்ட தூய இயற்கை பொருட்கள்",
+    eyebrow: "About us",
+    title: "10 years of tradition, quality and trust.",
+    secondaryTitle: "10 ஆண்டுகள் பாரம்பரியம், தரம் மற்றும் நம்பிக்கை",
     description:
-      "Kurinchi Health Products is a small family-run unit in Tisaiyanvilai, Tirunelveli district. We make cold pressed oils, natural sweeteners and handmade care products using the same slow, careful methods our grandparents used.",
-    imageAlt: "Kurinchi Health Products traditional natural products",
+      "Retchakar Oil Mill, based in Tisaiyanvilai, Tirunelveli District, is a trusted name in traditional wooden chekku oils and natural products, proudly serving customers for the past 10 years. Operating under the brand name Kurinji Health Products, our journey began with a vision to bring traditional products and authentic natural goodness to every household.",
+    imageAlt: "Kurinji Health Products traditional natural products",
     why: {
-      eyebrow: "Why we started",
-      title: "A simple promise: real food, made honestly.",
+      eyebrow: "Our story",
+      title: "Tradition, quality and trust for 10 years.",
       paragraphs: [
-        "Somewhere along the way, everyday food became complicated. Oils were refined, bleached and deodorised. Sugar was stripped of everything except sweetness. Labels grew longer than the ingredient lists.",
-        "We wanted something simpler. So we went back to the wood press, the traditional pot and the small batch. Our coconut, gingelly and groundnut oils are pressed slowly so the natural aroma and nutrients stay in the bottle. Our country sugar, palm jaggery and palm candy are unrefined. Our rock salt is handpicked and additive-free.",
-        "We are not a large factory. We are a small team that still believes in doing things the long way, because the long way is usually the right way.",
+        "Retchakar Oil Mill, based in Tisaiyanvilai, Tirunelveli District, is a trusted name in traditional wooden chekku oils and natural products, proudly serving customers for the past 10 years. Operating under the brand name Kurinji Health Products, our journey began with a vision to bring traditional products and authentic natural goodness to every household.",
+        "We believe that traditional methods, quality ingredients and customer trust are the foundation of a successful business. Our speciality is traditional wooden chekku oil extraction. We produce coconut oil, groundnut oil and sesame oil with a focus on maintaining quality, freshness and authentic taste. In addition to edible oils, we offer country jaggery, rock salt, palm jaggery, palm candy and handmade coconut oil soap.",
+        "We proudly serve both wholesale and retail customers — distributors, supermarkets, grocery stores, retailers and individual customers. Our goal is to make Kurinji Health Products a trusted choice for every home and business.",
+      ],
+    },
+    vision: {
+      eyebrow: "Our vision",
+      title: "A trusted name in natural and traditional products.",
+      text: "To become a trusted and recognised brand in natural and traditional products by delivering consistent quality and building lasting customer relationships.",
+    },
+    mission: {
+      eyebrow: "Our mission",
+      title: "Quality traditional products, accessible to every home.",
+      items: [
+        "To provide quality traditional products at reasonable prices.",
+        "To preserve and promote traditional wooden chekku oil extraction.",
+        "To make natural and traditional products accessible to every household.",
+        "To maintain honesty, transparency and customer satisfaction.",
+        "To build long-term relationships with customers, retailers and distributors.",
       ],
     },
     values: {
-      eyebrow: "What we stand for",
-      title: "Quality. Purity. Health.",
-      secondaryTitle: "தரம் • தூய்மை • ஆரோக்கியம்",
+      eyebrow: "Our values",
+      title: "Quality. Tradition. Trust. Commitment.",
+      secondaryTitle: "தரம் • பாரம்பரியம் • நம்பிக்கை • அர்ப்பணிப்பு",
       description:
-        "Three words that guide every decision we make, from sourcing to packing.",
+        "Four values that guide every decision we make, from sourcing to packing.",
       items: [
         {
           emoji: "🌿",
           title: "Quality",
           secondaryTitle: "தரம்",
-          text: "We choose ingredients carefully and make every product in small batches, so nothing is rushed and nothing is compromised.",
+          text: "We give importance to the quality of every product.",
+        },
+        {
+          emoji: "🏺",
+          title: "Tradition",
+          secondaryTitle: "பாரம்பரியம்",
+          text: "We respect traditional methods and values.",
         },
         {
           emoji: "💚",
-          title: "Purity",
-          secondaryTitle: "தூய்மை",
-          text: "No chemicals, no preservatives and no artificial colours. Our oils are unrefined and our sweeteners are unbleached.",
+          title: "Trust",
+          secondaryTitle: "நம்பிக்கை",
+          text: "Customer satisfaction and trust are at the heart of our business.",
         },
         {
-          emoji: "🌱",
-          title: "Health",
-          secondaryTitle: "ஆரோக்கியம்",
-          text: "We believe everyday food should support everyday health. Simple, traditional ingredients are often the best ones.",
+          emoji: "🤝",
+          title: "Commitment",
+          secondaryTitle: "அர்ப்பணிப்பு",
+          text: "We are dedicated to serving our customers with care and responsibility.",
         },
       ],
     },
@@ -389,17 +456,17 @@ export const en = {
         {
           step: "01",
           title: "Sourcing",
-          text: "Coconuts, sesame, groundnuts and palm sap are selected from trusted local sources in and around Tirunelveli.",
+          text: "Coconuts, groundnuts, sesame and palm sap are selected from trusted local sources in and around Tirunelveli.",
         },
         {
           step: "02",
           title: "Wood pressing",
-          text: "Oils are extracted slowly in a traditional wooden press. No high heat, no chemical solvents, no bleaching.",
+          text: "Oils are extracted slowly in a traditional wooden chekku. No high heat, no chemical solvents, no bleaching.",
         },
         {
           step: "03",
           title: "Small-batch preparation",
-          text: "Sweeteners, rock salt and handmade soap are prepared in small batches using simple, time-tested methods.",
+          text: "Country jaggery, rock salt, palm jaggery, palm candy and handmade soap are prepared in small batches using simple, time-tested methods.",
         },
         {
           step: "04",
@@ -411,7 +478,7 @@ export const en = {
     trust: {
       eyebrow: "Trust & transparency",
       title: "Registered, labelled and accountable.",
-      text: "We are FSSAI registered and every pack carries clear information. If you ever have a question about an ingredient, a batch or a delivery, you can reach us directly.",
+      text: "We are FSSAI registered and every pack carries clear information. With 10 years of experience, we remain committed to quality, honesty and customer satisfaction. If you ever have a question about an ingredient, a batch or a delivery, you can reach us directly.",
       unit: "Our unit",
     },
   },
@@ -458,9 +525,9 @@ export const en = {
       note: "This opens WhatsApp with your message ready to send. No account or payment is needed.",
     },
     map: {
-      title: "Kurinchi Health Products location map",
+      title: "Kurinji Health Products location map",
       caption:
-        "Find us near Tisaiyanvilai, Tirunelveli. Please call ahead before visiting.",
+        "Find us in Tisaiyanvilai, Tirunelveli District. Please call ahead before visiting.",
     },
   },
   notFound: {
@@ -473,29 +540,29 @@ export const en = {
   },
   faq: [
     {
-      question: "What is cold pressed or wood pressed oil?",
+      question: "What is traditional wooden chekku oil?",
       answer:
-        "Cold pressed oil is extracted slowly using a traditional wooden press (chekku) instead of high heat or chemicals. This keeps the natural aroma, flavour and nutrients of the seed or nut intact. Our coconut, gingelly and groundnut oils are all wood pressed and unrefined.",
+        "Chekku oil is extracted slowly using a traditional wooden press instead of high heat or chemicals. This keeps the natural aroma, flavour and nutrients of the seed or nut intact. Our coconut, groundnut and sesame (gingelly) oils are all wood pressed and unrefined.",
     },
     {
       question: "Do your products contain chemicals or preservatives?",
       answer:
-        "No. Our oils, country sugar, rock salt, palm jaggery, palm candy and herbal hair oil are made without added chemicals or preservatives. We keep the process simple and traditional.",
+        "No. Our oils, country jaggery, rock salt, palm jaggery, palm candy and handmade coconut oil soap are made without added chemicals or preservatives. We keep the process simple and traditional.",
     },
     {
       question: "How do I place an order?",
       answer:
-        "Tap any product and use the Order on WhatsApp button, or call us directly. We will confirm the available sizes, price and delivery options. There is no online payment needed.",
+        "Tap any product and use the Order on WhatsApp button, or call us directly on 8760471771 or 7373446688. We will confirm the available sizes, price and delivery options. There is no online payment needed.",
     },
     {
-      question: "Where do you deliver?",
+      question: "Do you supply wholesale and retail?",
       answer:
-        "We are based in Tisaiyanvilai, Tirunelveli district, Tamil Nadu. We deliver locally and can arrange courier delivery across India. Message us on WhatsApp with your pincode to confirm.",
+        "Yes. We welcome individual customers, retailers, grocery stores, supermarkets, distributors and bulk buyers. Message us on WhatsApp with your requirement and we will share wholesale or retail pricing.",
     },
     {
       question: "Are these products suitable for daily use?",
       answer:
-        "Yes. Our cold pressed oils, country sugar, rock salt and palm products are everyday kitchen staples. Use them as you would any traditional ingredient. Product benefit descriptions are traditional, not medical advice.",
+        "Yes. Our wooden chekku oils, country jaggery, rock salt and palm products are everyday kitchen staples. Use them as you would any traditional ingredient. Product benefit descriptions are traditional, not medical advice.",
     },
   ],
   whatsapp: {
@@ -513,21 +580,21 @@ export const en = {
   },
   structured: {
     storeDescription:
-      "Kurinchi Health Products brings you traditional cold pressed coconut, gingelly and groundnut oils, organic country sugar, Himalayan rock salt, palm jaggery, palm candy, handmade coconut oil soap and herbal hair oil. 100% natural, chemical-free products made by traditional methods in Tirunelveli, Tamil Nadu.",
+      "Retchakar Oil Mill and Kurinji Health Products bring you 10 years of traditional wooden chekku coconut, groundnut and sesame oils, country jaggery, rock salt, palm jaggery, palm candy and handmade coconut oil soap. Natural products made with care in Tisaiyanvilai, Tirunelveli, Tamil Nadu.",
     websiteDescription:
-      "Traditional cold pressed oils, natural sweeteners and handmade care products from Tirunelveli, Tamil Nadu.",
+      "Traditional wooden chekku oils, natural food products and handmade coconut oil soap from Tisaiyanvilai, Tirunelveli, Tamil Nadu.",
     organizationDescription:
-      "A small family-run unit in Tisaiyanvilai, Tirunelveli, making traditional cold pressed oils, natural sweeteners and handmade care products.",
+      "Retchakar Oil Mill, operating as Kurinji Health Products, is a trusted name in traditional wooden chekku oils and natural products with 10 years of experience.",
     areaServed: "Tamil Nadu",
     paymentAccepted: "Cash, UPI, Bank Transfer",
     contactType: "customer service",
     availableLanguages: ["English", "Tamil"],
-    offerCatalog: "Kurinchi Health Products",
+    offerCatalog: "Kurinji Health Products",
     productSizeProperty: "Available size",
     aboutDescription:
-      "The story, values and traditional production methods behind Kurinchi Health Products.",
+      "The story, vision, mission, values and traditional production methods behind Retchakar Oil Mill and Kurinji Health Products.",
     contactDescription:
-      "Contact details and enquiry form for Kurinchi Health Products, Tirunelveli.",
+      "Contact details and enquiry form for Kurinji Health Products, Tisaiyanvilai, Tirunelveli.",
     breadcrumb: "Breadcrumb",
   },
 };

@@ -1,15 +1,17 @@
 export const SITE = {
-  name: "Kurinchi Health Products",
+  name: "Kurinji Health Products",
   tamilName: "குறிஞ்சி ஹெல்த் புரொடக்ட்ஸ்",
   url:
     process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ??
     "https://kurinchihealthproducts.com",
-  phoneDisplay: "+91 6385 469 100",
-  phone: "+916385469100",
-  whatsapp: "916385469100",
-  email: "hello@kurinchihealthproducts.com",
+  phoneDisplay: "+91 87604 71771",
+  phone: "+918760471771",
+  phoneDisplayAlt: "+91 73734 46688",
+  phoneAlt: "+917373446688",
+  whatsapp: "918760471771",
+  email: "Retchakaroilmill@gmail.com",
   fssai: "22418328000741",
-  marketBy: "Ratchakar Oil Mill",
+  marketBy: "Retchakar Oil Mill",
   address: {
     line1: "200, Mannaraja Koil Street",
     line2: "Tisaiyanvilai",

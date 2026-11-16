@@ -50,7 +50,7 @@ export const productContentEn: Record<ProductSlug, ProductContent> = {
       "Use a small amount on skin as a gentle moisturiser.",
     ],
     imageAlt:
-      "Kurinchi Health Products cold pressed coconut oil bottle — செக்கு தேங்காய் எண்ணெய்",
+      "Kurinji Health Products cold pressed coconut oil bottle — செக்கு தேங்காய் எண்ணெய்",
     badge: "Bestseller",
   },
   "cold-pressed-gingelly-oil": {
@@ -88,7 +88,7 @@ export const productContentEn: Record<ProductSlug, ProductContent> = {
       "Store in a cool, dry place away from direct sunlight.",
     ],
     imageAlt:
-      "Kurinchi Health Products cold pressed gingelly oil bottle — செக்கு நல்லெண்ணை",
+      "Kurinji Health Products cold pressed gingelly oil bottle — செக்கு நல்லெண்ணை",
   },
   "cold-pressed-groundnut-oil": {
     name: "Cold Pressed Groundnut Oil",
@@ -124,19 +124,19 @@ export const productContentEn: Record<ProductSlug, ProductContent> = {
       "Store in a cool, dry place with the lid tightly closed.",
     ],
     imageAlt:
-      "Kurinchi Health Products cold pressed groundnut oil bottle — செக்கு கடலை எண்ணெய்",
+      "Kurinji Health Products cold pressed groundnut oil bottle — செக்கு கடலை எண்ணெய்",
   },
-  "organic-country-sugar": {
-    name: "Organic Country Sugar",
-    secondaryName: "ஆர்கானிக் நாட்டு சர்க்கரை",
+  "country-jaggery": {
+    name: "Country Jaggery",
+    secondaryName: "நாட்டு சர்க்கரை",
     tagline:
-      "Naattu sarkarai — a natural, chemical free substitute for white sugar",
+      "Nattu sarkkarai — a natural, chemical free substitute for white sugar",
     secondaryTagline:
       "வெள்ளை சர்க்கரைக்கு இயற்கையான மாற்று — ரசாயனம் இல்லாத நாட்டு சர்க்கரை",
     summary:
-      "Unrefined country sugar (naattu sarkarai) made from natural cane, with a rich caramel taste and no chemicals.",
+      "Unrefined country jaggery (nattu sarkkarai) made from natural cane, with a rich caramel taste and no chemicals.",
     description:
-      "Country sugar, or naattu sarkarai, is an unrefined natural sweetener made from sugarcane. It retains more of the natural molasses, minerals and flavour than ordinary white sugar. Use it in coffee, tea, sweets, porridge and traditional recipes for a warm caramel sweetness. Our country sugar is 100% chemical free and a healthier everyday choice for the whole family.",
+      "Country jaggery, or nattu sarkkarai, is an unrefined natural sweetener made from sugarcane. It retains more of the natural molasses, minerals and flavour than ordinary white sugar. Use it in coffee, tea, sweets, porridge and traditional recipes for a warm caramel sweetness. Our country jaggery is 100% chemical free and a healthier everyday choice for the whole family.",
     benefits: [
       {
         title: "Natural substitute for sugar",
@@ -155,28 +155,28 @@ export const productContentEn: Record<ProductSlug, ProductContent> = {
         text: "Traditionally used in coffee, tea, sweets and home remedies.",
       },
     ],
-    ingredients: ["100% natural country sugar (naattu sarkarai)"],
+    ingredients: ["100% natural country jaggery (nattu sarkkarai)"],
     usage: [
       "Use as a direct substitute for white sugar in tea and coffee.",
       "Add to porridge, sweets and traditional recipes.",
       "Start with a little and adjust to taste.",
     ],
     imageAlt:
-      "Kurinchi Health Products organic country sugar pack — ஆர்கானிக் நாட்டு சர்க்கரை",
+      "Kurinji Health Products country jaggery pack — நாட்டு சர்க்கரை",
     badge: "100% Natural",
   },
-  "himalayan-rock-salt": {
-    name: "Himalayan Rock Salt",
+  "rock-salt": {
+    name: "Rock Salt",
     secondaryName: "இந்துப்பு",
-    tagline: "Nature's purest salt for a healthy life",
-    secondaryTagline: "ஆரோக்கியமான வாழ்வுக்கு இயற்கையின் தூய இந்துப்பு",
+    tagline: "Natural rock salt for healthy everyday cooking",
+    secondaryTagline: "ஆரோக்கியமான தினசரி சமையலுக்கு இயற்கையான இந்துப்பு",
     summary:
-      "Handpicked Himalayan rock salt with essential trace minerals — an additive-free alternative to table salt.",
+      "Natural rock salt with essential trace minerals — an additive-free alternative to table salt.",
     description:
-      "Our Himalayan rock salt (induppu) is handpicked from the Himalayas and is naturally rich in trace minerals. It is an additive-free alternative to ordinary table salt, with a clean, balanced taste that works beautifully in everyday cooking. It is also traditionally used in spa and healing baths.",
+      "Our rock salt (induppu) is naturally rich in trace minerals. It is an additive-free alternative to ordinary table salt, with a clean, balanced taste that works beautifully in everyday cooking. It is also traditionally used in spa and healing baths.",
     benefits: [
       {
-        title: "Handpicked from the Himalayas",
+        title: "Natural rock salt",
         text: "Naturally formed rock salt with no artificial additives.",
       },
       {
@@ -192,13 +192,13 @@ export const productContentEn: Record<ProductSlug, ProductContent> = {
         text: "Great for cooking, seasoning, spa and healing baths.",
       },
     ],
-    ingredients: ["100% Himalayan rock salt"],
+    ingredients: ["100% natural rock salt"],
     usage: [
       "Use in everyday cooking and seasoning.",
       "Add a handful to warm bath water for a relaxing soak.",
       "Store in an airtight container in a dry place.",
     ],
-    imageAlt: "Kurinchi Health Products Himalayan rock salt pack — இந்துப்பு",
+    imageAlt: "Kurinji Health Products rock salt pack — இந்துப்பு",
     badge: "Chemical Free",
   },
   "handmade-coconut-oil-soap": {
@@ -236,46 +236,7 @@ export const productContentEn: Record<ProductSlug, ProductContent> = {
       "Keep the soap dry between uses so it lasts longer.",
     ],
     imageAlt:
-      "Kurinchi Health Products handmade coconut oil soap bar — கைவினை சோப்",
-  },
-  "herbal-hair-oil": {
-    name: "Herbal Hair Oil",
-    secondaryName: "மூலிகை கூந்தல் எண்ணெய்",
-    tagline: "Nature's care for strong and healthy hair",
-    secondaryTagline:
-      "வலுவான, ஆரோக்கியமான கூந்தலுக்கு இயற்கையின் மூலிகை பராமரிப்பு",
-    summary:
-      "A handmade herbal hair oil with no chemicals or preservatives, made to nourish the scalp and hair naturally.",
-    description:
-      "Our herbal hair oil is prepared by hand using a blend of traditional herbs and pure oils. It is made without chemicals or preservatives and is designed to nourish the scalp, reduce dryness and support strong, healthy-looking hair. A gentle weekly oil massage is a simple ritual that has been part of Tamil households for generations.",
-    benefits: [
-      {
-        title: "100% herbal",
-        text: "A traditional blend of herbs and natural oils.",
-      },
-      {
-        title: "No chemicals or preservatives",
-        text: "Handmade without artificial additives.",
-      },
-      {
-        title: "Nourishes the scalp",
-        text: "A relaxing oil massage helps reduce dryness and flaking.",
-      },
-      {
-        title: "Supports healthy-looking hair",
-        text: "Use regularly as part of a natural hair care routine.",
-      },
-    ],
-    ingredients: ["Natural herb blend", "Pure coconut oil", "Sesame oil"],
-    usage: [
-      "Warm a small amount of oil in your palms.",
-      "Massage gently into the scalp and hair.",
-      "Leave for at least an hour, then wash with a mild shampoo.",
-      "Use once or twice a week for best results.",
-    ],
-    imageAlt:
-      "Kurinchi Health Products herbal hair oil bottle — மூலிகை கூந்தல் எண்ணெய்",
-    badge: "Handmade",
+      "Kurinji Health Products handmade coconut oil soap bar — கைவினை சோப்",
   },
   "pure-palm-jaggery": {
     name: "Pure Palm Jaggery",
@@ -312,7 +273,7 @@ export const productContentEn: Record<ProductSlug, ProductContent> = {
       "Store in an airtight container away from moisture.",
     ],
     imageAlt:
-      "Kurinchi Health Products pure palm jaggery — சுத்தமான கருப்பட்டி",
+      "Kurinji Health Products pure palm jaggery — சுத்தமான கருப்பட்டி",
   },
   "palm-candy": {
     name: "Palm Candy",
@@ -347,6 +308,6 @@ export const productContentEn: Record<ProductSlug, ProductContent> = {
       "Traditionally combined with herbs for home remedies.",
       "Store in an airtight container in a dry place.",
     ],
-    imageAlt: "Kurinchi Health Products palm candy — பனங்கற்கண்டு",
+    imageAlt: "Kurinji Health Products palm candy — பனங்கற்கண்டு",
   },
 };
