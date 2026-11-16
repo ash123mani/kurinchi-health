@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { localePath, type Locale } from "@/i18n/config";
 
@@ -24,28 +25,18 @@ export function Logo({
       hrefLang={locale}
     >
       <span
-        className={`flex h-11 w-11 items-center justify-center rounded-2xl transition-transform duration-300 group-hover:-rotate-3 ${
-          onDark ? "bg-cream/10" : "bg-forest"
+        className={`relative flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-full ring-1 transition-transform duration-300 group-hover:scale-105 ${
+          onDark ? "bg-cream/10 ring-cream/20" : "bg-cream ring-line"
         }`}
       >
-        <svg
-          viewBox="0 0 32 32"
-          aria-hidden="true"
-          className="h-6 w-6"
-          fill="none"
-        >
-          <path
-            d="M16 4c5 4 8 8 8 12a8 8 0 0 1-16 0c0-4 3-8 8-12Z"
-            fill="#E3B45B"
-          />
-          <path
-            d="M16 9v14M16 16c-2.5-2.4-5-3-7-3 .6 2.6 2.4 4.5 5 5.2M16 19c2.5-2.4 5-3 7-3-.6 2.6-2.4 4.5-5 5.2"
-            stroke={onDark ? "#1F3D2B" : "#FAF6EC"}
-            strokeWidth="1.6"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
+        <Image
+          src="/logo.jpeg"
+          alt=""
+          fill
+          sizes="44px"
+          className="object-cover"
+          priority
+        />
       </span>
       <span className="leading-tight">
         <span
