@@ -40,7 +40,7 @@ export function Logo({
       </span>
       <span className="leading-tight">
         <span
-          className={`block font-display text-[17px] font-semibold tracking-tight ${
+          className={`block font-display text-[20px] font-semibold tracking-tight ${
             onDark ? "text-cream" : "text-forest"
           }`}
         >
