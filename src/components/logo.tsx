@@ -30,11 +30,11 @@ export function Logo({
         }`}
       >
         <Image
-          src="/logo.jpeg"
+          src="/logo.png"
           alt=""
           fill
           sizes="44px"
-          className="object-cover"
+          className="object-contain"
           priority
         />
       </span>
