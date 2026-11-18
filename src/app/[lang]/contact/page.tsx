@@ -50,9 +50,9 @@ export async function generateMetadata({
   };
 }
 
-const mapQuery = encodeURIComponent(
-  `${SITE.marketBy}, ${SITE.address.line1}, ${SITE.address.line2}, ${SITE.address.city}, ${SITE.address.state} ${SITE.address.postalCode}`,
-);
+const mapQuery = encodeURIComponent(fullAddress());
+const mapEmbedUrl = `https://www.google.com/maps?q=${mapQuery}&output=embed`;
+const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${mapQuery}`;
 
 export default async function ContactPage({ params }: ContactPageProps) {
   const { lang } = await params;
@@ -283,7 +283,7 @@ export default async function ContactPage({ params }: ContactPageProps) {
           <div className="overflow-hidden rounded-[28px] border border-line bg-cream-2">
             <iframe
               title={contact.map.title}
-              src={`https://www.google.com/maps?q=${mapQuery}&output=embed`}
+              src={mapEmbedUrl}
               width="100%"
               height="420"
               loading="lazy"
@@ -294,6 +294,30 @@ export default async function ContactPage({ params }: ContactPageProps) {
           <p className="mt-3 text-center text-xs text-ink-3">
             {contact.map.caption}
           </p>
+          <div className="mt-4 flex justify-center">
+            <a
+              href={mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary min-h-0! px-5! py-2.5! text-[13px]"
+            >
+              {contact.map.openInMaps}
+              <svg
+                viewBox="0 0 24 24"
+                className="h-4 w-4"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                aria-hidden="true"
+              >
+                <path
+                  d="M5 12h14M13 6l6 6-6 6"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
         </div>
       </section>
 

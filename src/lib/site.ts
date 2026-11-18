@@ -13,7 +13,7 @@ export const SITE = {
   fssai: "22418328000741",
   marketBy: "Retchakar Oil Mill",
   address: {
-    line1: "200, Mannaraja Koil Street",
+    line1: "250, Mannaraja Koil Street",
     line2: "Tisaiyanvilai",
     city: "Tirunelveli",
     state: "Tamil Nadu",

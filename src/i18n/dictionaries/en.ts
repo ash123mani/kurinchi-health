@@ -528,6 +528,7 @@ export const en = {
       title: "Kurinji Health Products location map",
       caption:
         "Find us in Tisaiyanvilai, Tirunelveli District. Please call ahead before visiting.",
+      openInMaps: "Open in Maps",
     },
   },
   notFound: {
